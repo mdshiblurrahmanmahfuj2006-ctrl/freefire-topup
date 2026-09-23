@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>FF TopUp BD - Free Fire Top Up</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:Arial,sans-serif;
+}
+
+body{
+    background:#080b12;
+    color:white;
+}
+
+header{
+    background:linear-gradient(135deg,#ff6a00,#ff1e00);
+    padding:22px 15px;
+    text-align:center;
+}
+
+header h1{
+    font-size:28px;
+}
+
+header p{
+    margin-top:7px;
+    font-size:14px;
+}
+
+.container{
+    width:94%;
+    max-width:1000px;
+    margin:auto;
+}
+
+.hero{
+    margin-top:18px;
+    padding:25px 18px;
+    border-radius:18px;
+    text-align:center;
+    background:linear-gradient(135deg,#151a27,#222a3d);
+    border:1px solid #30394e;
+}
+
+.hero h2{
+    color:#ffd000;
+    margin-bottom:8px;
+}
+
+.hero p{
+    color:#cbd0db;
+}
+
+.section-title{
+    margin:28px 0 15px;
+    font-size:21px;
+    color:#ffd000;
+}
+
+.packages{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:12px;
+}
+
+.card{
+    background:#111621;
+    border:1px solid #293143;
+    border-radius:14px;
+    padding:17px 10px;
+    text-align:center;
+    transition:.2s;
+}
+
+.card:hover{
+    border-color:#ff8500;
+    transform:translateY(-2px);
+}
+
+.diamond{
+    font-size:28px;
+    margin-bottom:7px;
+}
+
+.card h3{
+    color:#fff;
+    font-size:17px;
+}
+
+.card .price{
+    color:#00ff9d;
+    font-size:19px;
+    font-weight:bold;
+    margin:8px 0;
+}
+
+.card button{
+    border:none;
+    background:#ff6500;
+    color:white;
+    padding:9px 15px;
+    border-radius:8px;
+    font-weight:bold;
+    width:100%;
+}
+
+.card button:hover{
+    background:#ff8a00;
+}
+
+.form-box{
+    margin-top:25px;
+    background:#111621;
+    border:1px solid #293143;
+    border-radius:16px;
+    padding:20px;
+}
+
+label{
+    display:block;
+    margin:12px 0 6px;
+    color:#ddd;
+}
+
+input,select{
+    width:100%;
+    padding:13px;
+    background:#080b12;
+    color:white;
+    border:1px solid #374052;
+    border-radius:8px;
+    outline:none;
+}
+
+input:focus,select:focus{
+    border-color:#ff7600;
+}
+
+.payment{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+    margin-top:10px;
+}
+
+.payment label{
+    background:#1a202d;
+    padding:12px;
+    border-radius:8px;
+    border:1px solid #30394b;
+}
+
+.submit{
+    width:100%;
+    margin-top:20px;
+    padding:14px;
+    border:none;
+    border-radius:9px;
+    background:linear-gradient(135deg,#ff7900,#ff2600);
+    color:white;
+    font-size:17px;
+    font-weight:bold;
+}
+
+.notice{
+    margin-top:20px;
+    padding:15px;
+    background:#191d27;
+    border-left:4px solid #ffd000;
+    border-radius:7px;
+    color:#ccc;
+    font-size:13px;
+    line-height:1.6;
+}
+
+footer{
+    text-align:center;
+    margin-top:35px;
+    padding:25px 10px;
+    background:#05070b;
+    color:#89909e;
+    font-size:13px;
+}
+
+@media(min-width:700px){
+    .packages{
+        grid-template-columns:repeat(4,1fr);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🔥 FF TOPUP BD</h1>
+    <p>Free Fire Diamond & Membership Top Up</p>
+</header>
+
+<div class="container">
+
+    <div class="hero">
+        <h2>💎 দ্রুত Free Fire Top Up</h2>
+        <p>আপনার Player UID দিয়ে প্যাকেজ নির্বাচন করুন</p>
+    </div>
+
+
+    <!-- DIAMOND -->
+
+    <h2 class="section-title">💎 Diamond Top Up</h2>
+
+    <div class="packages">
+
+        <div class="card">
+            <div class="diamond">💎</div>
+            <h3>100 Diamond</h3>
+            <div class="price">৳ 100</div>
+            <button onclick="selectPackage('100 Diamond')">
+                Select
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="diamond">💎</div>
+            <h3>310 Diamond</h3>
+            <div class="price">৳ 300</div>
+            <button onclick="selectPackage('310 Diamond')">
+                Select
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="diamond">💎</div>
+            <h3>520 Diamond</h3>
+            <div class="price">৳ 500</div>
+            <button onclick="selectPackage('520 Diamond')">
+                Select
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="diamond">💎</div>
+            <h3>1060 Diamond</h3>
+            <div class="price">৳ 1000</div>
+            <button onclick="selectPackage('1060 Diamond')">
+                Select
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- MEMBERSHIP -->
+
+    <h2 class="section-title">🎁 Membership</h2>
+
+    <div class="packages">
+
+        <div class="card">
+            <div class="diamond">📅</div>
+            <h3>Weekly Membership</h3>
+            <div class="price">৳ 150</div>
+            <button onclick="selectPackage('Weekly Membership')">
+                Select
+            </button>
+        </div>
+
+        <div class="card">
+            <div class="diamond">📅</div>
+            <h3>Monthly Membership</h3>
+            <div class="price">৳ 500</div>
+            <button onclick="selectPackage('Monthly Membership')">
+                Select
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- ORDER -->
+
+    <h2 class="section-title">🛒 Order করুন</h2>
+
+    <div class="form-box">
+
+        <label>Free Fire Player UID</label>
+        <input
+            type="text"
+            id="uid"
+            placeholder="আপনার Player UID লিখুন"
+        >
+
+        <label>আপনার নাম</label>
+        <input
+            type="text"
+            id="name"
+            placeholder="নাম লিখুন"
+        >
+
+        <label>মোবাইল নম্বর</label>
+        <input
+            type="tel"
+            id="phone"
+            placeholder="01XXXXXXXXX"
+        >
+
+        <label>Top Up Package</label>
+
+        <select id="package">
+            <option value="">Package নির্বাচন করুন</option>
+            <option>100 Diamond</option>
+            <option>310 Diamond</option>
+            <option>520 Diamond</option>
+            <option>1060 Diamond</option>
+            <option>Weekly Membership</option>
+            <option>Monthly Membership</option>
+        </select>
+
+
+        <label>Payment Method</label>
+
+        <div class="payment">
+
+            <label>
+                <input type="radio"
+                       name="payment"
+                       value="bKash">
+                bKash
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="payment"
+                       value="Nagad">
+                Nagad
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="payment"
+                       value="Rocket">
+                Rocket
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="payment"
+                       value="Card">
+                Card
+            </label>
+
+        </div>
+
+
+        <label>Transaction ID</label>
+
+        <input
+            type="text"
+            id="trx"
+            placeholder="Payment করার পর Transaction ID"
+        >
+
+
+        <button class="submit" onclick="submitOrder()">
+            ✅ Order Submit করুন
+        </button>
+
+    </div>
+
+
+    <div class="notice">
+        ⚠️ গুরুত্বপূর্ণ: Payment করার আগে Player UID ভালোভাবে
+        যাচাই করুন। ভুল UID দিলে Top Up ভুল অ্যাকাউন্টে যেতে পারে।
+        কোনো অবস্থাতেই আপনার Free Fire password এখানে দেবেন না।
+    </div>
+
+</div>
+
+
+<footer>
+    © 2026 FF TOPUP BD
+    <br><br>
+    Customer Support: আপনার WhatsApp/Phone এখানে দিন
+</footer>
+
+
+<script>
+
+function selectPackage(packageName){
+
+    document.getElementById("package").value = packageName;
+
+    window.scrollTo({
+        top:document.querySelector(".form-box").offsetTop,
+        behavior:"smooth"
+    });
+}
+
+
+function submitOrder(){
+
+    let uid =
+        document.getElementById("uid").value.trim();
+
+    let name =
+        document.getElementById("name").value.trim();
+
+    let phone =
+        document.getElementById("phone").value.trim();
+
+    let pack =
+        document.getElementById("package").value;
+
+    let trx =
+        document.getElementById("trx").value.trim();
+
+    let payment =
+        document.querySelector(
+            'input[name="payment"]:checked'
+        );
+
+
+    if(!uid){
+        alert("Player UID লিখুন");
+        return;
+    }
+
+    if(!name){
+        alert("আপনার নাম লিখুন");
+        return;
+    }
+
+    if(!phone){
+        alert("মোবাইল নম্বর লিখুন");
+        return;
+    }
+
+    if(!pack){
+        alert("Package নির্বাচন করুন");
+        return;
+    }
+
+    if(!payment){
+        alert("Payment Method নির্বাচন করুন");
+        return;
+    }
+
+    if(!trx){
+        alert("Transaction ID লিখুন");
+        return;
+    }
+
+
+    let message =
+        "FF TOPUP ORDER%0A%0A" +
+        "UID: " + uid + "%0A" +
+        "Name: " + name + "%0A" +
+        "Phone: " + phone + "%0A" +
+        "Package: " + pack + "%0A" +
+        "Payment: " + payment.value + "%0A" +
+        "Transaction ID: " + trx;
+
+
+    /*
+      এখানে YOUR_WHATSAPP_NUMBER-এর জায়গায়
+      তোমার WhatsApp নম্বর বসাতে হবে।
+
+      উদাহরণ:
+      8801XXXXXXXXX
+    */
+
+    let whatsappNumber =
+        "YOUR_WHATSAPP_NUMBER";
+
+    let url =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        message;
+
+    window.open(url,"_blank");
+}
+
+</script>
+
+</body>
+</html>
